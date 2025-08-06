@@ -7,6 +7,10 @@ interface Teacher {
   [key: string]: any; // allows additional attributes
 }
 
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
 const teacher3: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
@@ -17,10 +21,6 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
-
-interface Directors extends Teacher {
-  numberOfReports: number;
-}
 
 const director1: Directors = {
   firstName: 'John',
